@@ -1,0 +1,145 @@
+/* Variaveis do documento */
+:root {
+    --fonte-principal: 'Overpass', sans-serif;
+    --laranja: hsl(25, 97%, 53%);
+    --branco: hsl(0, 0%, 100%);
+    --cinza-claro: hsl(217, 12%, 63%);
+    --cinza-medio: hsl(216, 12%, 54%);
+    --azul-escuro: hsl(213, 19%, 18%);
+    --azul-escurao: hsl(216, 12%, 8%);
+    --azul-acinzentado: hsl(210, 19%, 18%);
+}
+/* Variaveis do documento */
+
+html {
+    height: 100%;
+    width: 100%;
+}
+body {
+    height: 100%;
+    font-size: 15px;
+    font-family: var(--fonte-principal);
+    font-weight: 400;
+    background-color: var(--azul-escurao);
+    margin: 0 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card {
+    max-width: 350px;
+    background: linear-gradient(to top, hsl(216, 12%, 11%), hsl(213, 19%, 18%));
+    padding: 2rem 1.5rem;
+    border-radius: 1rem;
+    box-sizing: border-box;
+}
+
+.card__imagem {
+    border-radius: 100% ;
+    box-shadow: 0px 0px 1px var(--azul-escurao);
+    padding: .8rem;
+    margin-bottom: 1rem;
+    background-color: var(--azul-acinzentado);
+    width: 15px;
+
+}
+
+.card__titulo {
+    color: var(--branco);
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.card__descricao {
+    color: var(--cinza-medio);
+    margin: 1rem 0;
+    line-height: 1.2rem;
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+}
+
+.card__lista {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin: 0 .2rem;
+}
+
+.card__listaitem {
+    border-radius: 50% ;
+    box-shadow: 0px 0px 1px var(--azul-escurao);
+    padding: .8rem 1rem;
+    background-color: var(--azul-acinzentado);
+    color: var(--cinza-claro);
+    box-sizing: border-box;
+    cursor: pointer;
+}
+.card__listaitem:nth-child(1) {
+    padding: .8rem 1.1rem;
+}
+
+.botao {
+    align-self: center;
+    justify-self: center;
+    margin-top: 1.5rem;
+    width: 95%;
+    padding: .8rem;
+    background-color: var(--laranja);
+    border-radius: 2rem;
+    color: var(--branco);
+    letter-spacing: .1rem;
+    text-transform: uppercase;
+}
+
+.ativo {
+    background-color: var(--cinza-medio);
+}
+
+.card__listaitem:hover {
+    background-color: var(--laranja);
+    color: var(--branco);
+    transition: .2s;
+}
+
+.botao:hover {
+    background-color: var(--branco);
+    color: var(--laranja);
+    transition: .3s;
+}
+
+/* Css da pagina de agradecimento */
+
+.container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    padding: 0 .3rem;
+}
+
+.img-agradecimento {
+    width: 50%;
+    align-self: center;
+}
+
+.rating {
+    background-color: var(--azul-acinzentado);
+    color: var(--laranja);
+    opacity: .9;
+    padding: .5rem 0;
+    width: 60%;
+    align-self: center;
+    justify-self: center;
+    border-radius: 1rem;
+    margin: 1.5rem 0 2rem 0;
+}
+
+@media screen and (min-width: 800px) {
+    .card {
+        padding: 2rem 2;
+    }
+}
